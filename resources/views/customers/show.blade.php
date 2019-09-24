@@ -5,6 +5,13 @@
 @section('content')
     <h1>Details for {{ $customer->firstName }} {{ $customer->lastName }}</h1>
     <p><a href="/customers">Customer List</a></p>
+    <p><a href="customers/{{ $customer->id }}/edit">Edit</a></p>
+    <form action="/customers/{{ $customer->id }}" method="POST">
+        @method('DELETE')
+        
+        @csrf
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
 
     <div class="row">
             <div class="col-12">

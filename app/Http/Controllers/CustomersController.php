@@ -33,6 +33,25 @@ class CustomersController extends Controller
         return view('customers.show', compact('customer'));
     }
 
+    public function edit(Customer $customer)
+    {        
+        return view('customers.edit', compact('customer'));
+    }
+
+    public function update(Customer $customer)
+    {
+        $customer->update($this->validateRequest());
+
+        return redirect('customers/' . $customer->id);
+    }
+
+    public function destroy(Customer $customer)
+    {
+        $customer->delete();
+
+        return redirect('customers');
+    }
+
     private function validateRequest()
     {
         return request()->validate([
