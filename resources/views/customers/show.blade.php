@@ -4,6 +4,7 @@
     
 @section('content')
     <h1>Details for {{ $customer->firstName }} {{ $customer->lastName }}</h1>
+
     <p><a href="/customers">Customer List</a></p>
 
     <div class="row">
