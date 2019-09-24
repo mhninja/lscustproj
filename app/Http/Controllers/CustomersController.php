@@ -32,4 +32,14 @@ class CustomersController extends Controller
 
         return view('customers.show', compact('customer'));
     }
+
+    private function validateRequest()
+    {
+        return request()->validate([
+            'firstName' => 'required|min:3',
+            'lastName' => 'required|min:3',
+            'email' => 'required|email',
+            'active' => 'required',
+        ]);   
+    }
 }

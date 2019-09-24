@@ -28,6 +28,7 @@
                         <td>{{ $customer->email }}</td>
                         <td>{{ $customer->active }}</td>
                         <td><a href="customers/{{ $customer->id }}">Show</a></td>
+                        </td>
                     </tr>
                 @endforeach
                 </table>

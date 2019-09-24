@@ -3,11 +3,21 @@
 @section('title' , 'Add Customer Details')
     
 @section('content')
-    <h1>Add Customer Details</h1>
+    
+    <div class="row">
+        <div class="col-12">
+            <h1>Add Customer Details</h1>
+        </div>
+    </div>
 
-    <form action="/customers" method="POST">
-        @include('customers.form')
+    <div class="row">
+        <div class="col-12">
+            <form action="/customers" method="POST">
+                @include('customers.form')
 
-        <button type="submit" class="btn btn-primary">Add Customer</button>
-    </form>
+                <button type="submit" class="btn btn-primary">Add Customer</button>
+            </form>
+        </div>
+    </div>
+    
 @endsection
