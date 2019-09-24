@@ -28,15 +28,6 @@
                         <td>{{ $customer->email }}</td>
                         <td>{{ $customer->active }}</td>
                         <td><a href="customers/{{ $customer->id }}">Show</a></td>
-                        <td><a href="customers/{{ $customer->id }}/edit">Edit</a></td>
-                        <td><form action="/customers/{{ $customer->id }}" method="POST">
-                                    @method('DELETE')
-                                    
-                                    
-                                    @csrf
-                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                </form>
-                            </td>
                     </tr>
                 @endforeach
                 </table>
